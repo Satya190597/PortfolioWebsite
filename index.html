@@ -8,6 +8,8 @@
     <title>Satya Prakash Nandy</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://kit.fontawesome.com/16f3b4346d.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,23 +17,24 @@
 
     </div>
     <div class="content">
-        <div class="div-title">
+        <div class="div-title content-div" id="introContent">
             <div>
                 <h1>Satya Prakash Nandy</h1>
                 <strong>Software Engineer</strong>
             </div>
             <div class="intro-footer">
-                <a href="#skillSetContent"><strong><i class="fa-solid fa-screwdriver-wrench"></i> Skills</strong></a>
-                <a href="#workExperienceContent"><strong><i class="fa-solid fa-briefcase"></i> Work
+                <a href="#" onclick="contentToggleHandler('skillSetContent')"><strong><i
+                            class="fa-solid fa-screwdriver-wrench"></i> Skills</strong></a>
+                <a href="#" onclick="contentToggleHandler('workExperienceContent')"><strong><i class="fa-solid fa-briefcase"></i> Work
                         Experience</strong></a>
-                <a href="#educationContent"><strong><i class="fa-solid fa-graduation-cap"></i> Education</strong></a>
-                <a href="#awardsAndCertificateContent"><strong><i class="fa-solid fa-award"></i> Awards And
+                <a href="#" onclick="contentToggleHandler('educationContent')"><strong><i class="fa-solid fa-graduation-cap"></i> Education</strong></a>
+                <a href="#" onclick="contentToggleHandler('awardsAndCertificateContent')"><strong><i class="fa-solid fa-award"></i> Awards And
                         Certificate</strong></a>
-                <a href="#projectsContent"><strong><i class="fa-solid fa-desktop"></i> Projects</strong></a>
-                <a href="#contactContent"><strong><i class="fa-solid fa-envelope"></i> Contact</strong></a>
+                <a href="#" onclick="contentToggleHandler('projectsContent')"><strong><i class="fa-solid fa-desktop"></i> Projects</strong></a>
+                <a href="#" onclick="contentToggleHandler('contactContent')"><strong><i class="fa-solid fa-envelope"></i> Contact</strong></a>
             </div>
         </div>
-        <div class="div-title" id="skillSetContent">
+        <div class="div-title content-div" id="skillSetContent">
             <div>
                 <h1 style="color:aliceblue;display: block;">Skills</h1>
             </div>
@@ -85,20 +88,26 @@
                 </div>
             </div>
         </div>
-        <div class="div-title" id="workExperienceContent">
+        <div class="div-title content-div" id="workExperienceContent">
             <div>
                 <h1>Work Experience</h1>
             </div>
             <div class="work-exp-div">
                 <div>
-                    <strong>EVOS Solutions</strong>
+                    <strong>EVOS Solutions Private Limited</strong>
+                    <strong>Web Developer Intern</strong>
+                    <strong>Bhubaneswar, Odisha</strong>
+                    <strong>Feb 2018 - Oct 2018</strong>
                 </div>
                 <div>
                     <strong>Mindfire Solutions</strong>
+                    <strong>Senior Software Engineer</strong>
+                    <strong>Bhubaneswar, Odisha</strong>
+                    <strong>Jan 2019 - Jan 2023</strong>
                 </div>
             </div>
         </div>
-        <div class="div-title" id="educationContent">
+        <div class="div-title content-div" id="educationContent">
             <div>
                 <h1 style="color:aliceblue;display: block;">Education</h1>
                 <div class="education-footer">
@@ -106,7 +115,7 @@
                 </div>
             </div>
         </div>
-        <div class="div-title" id="awardsAndCertificateContent">
+        <div class="div-title content-div" id="awardsAndCertificateContent">
             <div>
                 <h1 style="color:aliceblue;display: block;">Awards And Certificates</h1>
                 <div class="awards-footer">
@@ -116,7 +125,7 @@
                 </div>
             </div>
         </div>
-        <div class="div-title" id="projectsContent">
+        <div class="div-title content-div" id="projectsContent">
             <div>
                 <h1 style="color:aliceblue;display: block;">Projects</h1>
                 <div class="project-footer">
@@ -124,7 +133,7 @@
                 </div>
             </div>
         </div>
-        <div class="div-title" id="contactContent">
+        <div class="div-title content-div" id="contactContent">
             <div>
                 <h1 style="color:aliceblue;display: block;">Contact</h1>
                 <div class="contact-footer">
@@ -176,6 +185,20 @@
             </ul>
         </div>
     </div>
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
 </body>
 <script>
     window.onload = function () {
@@ -195,6 +218,23 @@
             content[0].style.display = "block"
             isPopUpOpen = false;
         }
+    }
+
+    contentToggleHandler = function (content) {
+        hideAllContent();
+        showSingleContent(content);
+    }
+
+    hideAllContent = function () {
+        var contentDivs = document.getElementsByClassName('content-div');
+        for (let i = 0; i < contentDivs.length; i++) {
+            contentDivs[i].style.display = 'none'
+        }
+    }
+
+    showSingleContent = function (id) {
+        var contentDiv = document.getElementById(id);
+        $("#" + id).fadeIn("slow");
     }
 
 </script>
