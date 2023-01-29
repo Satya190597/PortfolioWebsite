@@ -1,0 +1,446 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  background: url(bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.div-title {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgba(1, 1, 26, 0.76);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-title div {
+  color: white;
+  text-align: center;
+}
+
+.div-title div h1 {
+  font-size: 90px;
+}
+
+/* **************** Change Slider Style *****************/
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.intro-footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.intro-footer a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.intro-footer a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* **************** Intro Footer ****************   */
+.intro-footer {
+  margin-top: 5vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.intro-footer strong {
+  background-color: rgba(19, 18, 18, 0.651);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* **************** SKILLS ****************  */
+
+.div-skills {
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+}
+
+.div-skills div {
+  flex: 1;
+  font-size: 30px;
+  text-align: center;
+}
+
+.div-skills ul li {
+  padding: 5px;
+  font-size: 25px;
+}
+
+.div-skills ul li i {
+  font-size: 15px;
+}
+
+.div-skills ul {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.work-exp-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  width: 100vw;
+}
+
+@media (max-width: 700px) {
+
+
+  .div-title div h1 {
+    font-size: 50px;
+  }
+
+
+  .div-skills {
+    display: block;
+    height: auto;
+  }
+
+  .div-skills div {
+    display: block;
+    margin-top: 20px;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .div-skills ul li {
+    font-size: 20px;
+  }
+
+  .awards-footer {
+    flex-direction: column;
+  }
+
+  .intro-footer {
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-evenly;
+  }
+
+  .intro-footer strong {
+    margin-top: 10px;
+  }
+
+  .contact-footer {
+    flex-direction: column;
+  }
+  .work-exp-div {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .work-exp-div div {
+    margin-top: 40px;
+  }
+
+  /* Hide Navigation On Mobile Device*/
+  .intro-footer {
+    display: none;
+  }
+}
+
+.div-workexp {
+  margin: 0px;
+  width: 100vw;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: aliceblue; */
+}
+
+
+
+.work-exp-div strong {
+  font-size: x-large;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.div-exp-workexp div {
+  flex: 1;
+}
+
+/* **************** POP UP **************** */
+.div-popup {
+
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.842);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+}
+
+.div-popup h1 {
+  color: white;
+  font-size: 80px;
+}
+
+.div-popup p {
+  color: white;
+  font-size: 30px;
+}
+
+.div-popup-content {
+  margin: auto 0px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 30vh;
+}
+
+/* **************** Education Footer **************** */
+.education-footer {
+  margin-top: 5vh;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.education-footer strong {
+  font-size: x-large;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* **************** Projects Footer **************** */
+.project-footer {
+  margin-top: 5vh;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.project-footer strong {
+  font-size: x-large;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* **************** Awards Footer **************** */
+.awards-footer {
+  margin-top: 5vh;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.awards-footer strong {
+  font-size: x-large;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* **************** Contact Div Footer **************** */
+.contact-footer {
+  margin-top: 5vh;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.contact-footer strong {
+  font-size: x-large;
+  background-color: rgba(19, 18, 18, 0.651);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact-footer a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact-footer a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* **************** Loading Screen **************** */
+.loading-screen {
+  display: block;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: aliceblue;
+}
