@@ -89,6 +89,7 @@ video {
 
 html {
   scroll-behavior: smooth;
+  font-family: 'Roboto Flex', sans-serif;
 }
 
 article,
@@ -143,6 +144,15 @@ html {
   background-size: cover;
 }
 
+#home {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  font-size: xx-large;
+  z-index: 100;
+  cursor: pointer;
+}
+
 .div-title {
   width: 100vw;
   height: 100vh;
@@ -152,7 +162,6 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #000000;
 }
 
 .div-title div {
@@ -184,39 +193,65 @@ body::-webkit-scrollbar {
   text-decoration: none;
 }
 
+/* **************** Intro CSS **************** */
+
+/* To-Do : Use variables. */
+
+.current-role {
+  font-size: xx-large;
+}
+
 /* **************** Intro Footer ****************   */
 .intro-footer {
   margin-top: 5vh;
   width: 100vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   z-index: 100;
 }
 
 .intro-footer strong {
-  background-color: rgba(19, 18, 18, 0.651);
-  padding: 10px;
-  border-radius: 5px;
   cursor: pointer;
+  font-size: xx-large;
 }
+
+.intro-footer strong span {
+  display: none;
+}
+
 
 
 /* **************** SKILLS ****************  */
 
-.div-skills {
+.skills-title {
+  flex: 1;
+  font-size: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.div-skills-container {
   width: 100vw;
-  height: 200px;
+  height: 100vh;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+}
+
+
+.div-skills {
+  flex: 1;
+  width: 100vw;
+  height: auto;
   display: flex;
   flex-direction: row;
 }
 
-.div-skills:nth-child(4) {
-  width: 100vw;
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-}
 
 .div-skills div {
   flex: 1;
@@ -230,12 +265,28 @@ body::-webkit-scrollbar {
 }
 
 .div-skills ul li i {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .div-skills ul {
   margin-top: 5px;
   text-align: center;
+}
+
+@media (max-width: 700px) {
+  .div-skills {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+  }
+
+  .div-skills-container {
+    justify-content: center;
+  }
+
+  body {
+    overflow-x: scroll;
+  }
 }
 
 .work-exp-div {
@@ -252,23 +303,6 @@ body::-webkit-scrollbar {
 
   .div-title div h1 {
     font-size: 50px;
-  }
-
-
-  .div-skills {
-    display: block;
-    height: auto;
-  }
-
-  .div-skills div {
-    display: block;
-    margin-top: 20px;
-    font-size: 25px;
-    text-align: center;
-  }
-
-  .div-skills ul li {
-    font-size: 20px;
   }
 
   .awards-footer {
@@ -288,18 +322,15 @@ body::-webkit-scrollbar {
   .contact-footer {
     flex-direction: column;
   }
+
   .work-exp-div {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
   .work-exp-div div {
     margin-top: 40px;
-  }
-
-  /* Hide Navigation On Mobile Device*/
-  .intro-footer {
-    display: none;
   }
 }
 
@@ -360,22 +391,52 @@ body::-webkit-scrollbar {
   margin-top: 30vh;
 }
 
-/* **************** Education Footer **************** */
-.education-footer {
-  margin-top: 5vh;
-  height: 10vh;
+/* **************** Education  **************** */
+
+.div-education-container {
   width: 100vw;
+  height: 100vh;
+  padding: 0px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+  color: #ffffff;
 }
 
-.education-footer strong {
-  font-size: x-large;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
+.education-title {
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1;
+}
+
+.education-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  flex: 2;
+}
+
+.education-list strong {
+  font-size: 30px;
+}
+
+@media (max-width: 700px) {
+  .education-list strong {
+    font-size: 20px;
+  }
+
+  .education-list {
+    justify-content: flex-start;
+    padding: 5%;
+  }
+
+  .education-list div {
+    margin: 5%;
+  }
 }
 
 /* **************** Projects Footer **************** */
@@ -415,37 +476,65 @@ body::-webkit-scrollbar {
 }
 
 /* **************** Contact Div Footer **************** */
-.contact-footer {
-  margin-top: 5vh;
-  height: 10vh;
+
+.div-contact-container {
+  width: 100vw;
+  height: 100vh;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #ffffff;
+}
+
+.contact-title {
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1;
+}
+
+.contact-content {
+  margin: 5%;
+  flex: 1;
   width: 100vw;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-
+  align-items: flex-start;
 }
 
-.contact-footer strong {
+.contact-content strong {
   font-size: x-large;
-  background-color: rgba(19, 18, 18, 0.651);
+  background-color: rgba(3, 63, 123, 0.651);
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.contact-footer a {
+.contact-content a {
   color: #ffffff;
   text-decoration: none;
 }
 
-.contact-footer a:hover {
+.contact-content a:hover {
   color: #ffffff;
   text-decoration: none;
 }
 
-.contact-footer a:visited {
+.contact-content a:visited {
   color: #ffffff;
   text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .contact-content {
+    flex-direction: column;
+    flex: 2;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 
 /* **************** Loading Screen **************** */
@@ -461,14 +550,14 @@ body::-webkit-scrollbar {
 
 
 
-area{
-  background: #4e54c8;  
-  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+area {
+  background: #4e54c8;
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
   width: 100%;
-  height:100vh;
+  height: 100vh;
 }
 
-.circles{
+.circles {
   position: absolute;
   top: 0;
   left: 0;
@@ -477,7 +566,7 @@ area{
   overflow: hidden;
 }
 
-.circles li{
+.circles li {
   position: absolute;
   display: block;
   list-style: none;
@@ -486,10 +575,10 @@ area{
   background: rgba(255, 255, 255, 0.2);
   animation: animate 25s linear infinite;
   bottom: -150px;
-  
+
 }
 
-.circles li:nth-child(1){
+.circles li:nth-child(1) {
   left: 25%;
   width: 80px;
   height: 80px;
@@ -497,7 +586,7 @@ area{
 }
 
 
-.circles li:nth-child(2){
+.circles li:nth-child(2) {
   left: 10%;
   width: 20px;
   height: 20px;
@@ -505,14 +594,14 @@ area{
   animation-duration: 12s;
 }
 
-.circles li:nth-child(3){
+.circles li:nth-child(3) {
   left: 70%;
   width: 20px;
   height: 20px;
   animation-delay: 4s;
 }
 
-.circles li:nth-child(4){
+.circles li:nth-child(4) {
   left: 40%;
   width: 60px;
   height: 60px;
@@ -520,28 +609,28 @@ area{
   animation-duration: 18s;
 }
 
-.circles li:nth-child(5){
+.circles li:nth-child(5) {
   left: 65%;
   width: 20px;
   height: 20px;
   animation-delay: 0s;
 }
 
-.circles li:nth-child(6){
+.circles li:nth-child(6) {
   left: 75%;
   width: 110px;
   height: 110px;
   animation-delay: 3s;
 }
 
-.circles li:nth-child(7){
+.circles li:nth-child(7) {
   left: 35%;
   width: 150px;
   height: 150px;
   animation-delay: 7s;
 }
 
-.circles li:nth-child(8){
+.circles li:nth-child(8) {
   left: 50%;
   width: 25px;
   height: 25px;
@@ -549,7 +638,7 @@ area{
   animation-duration: 45s;
 }
 
-.circles li:nth-child(9){
+.circles li:nth-child(9) {
   left: 20%;
   width: 15px;
   height: 15px;
@@ -557,7 +646,7 @@ area{
   animation-duration: 35s;
 }
 
-.circles li:nth-child(10){
+.circles li:nth-child(10) {
   left: 85%;
   width: 150px;
   height: 150px;
@@ -569,16 +658,17 @@ area{
 
 @keyframes animate {
 
-  0%{
-      transform: translateY(0) rotate(0deg);
-      opacity: 1;
-      border-radius: 0;
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
   }
 
-  100%{
-      transform: translateY(-1000px) rotate(720deg);
-      opacity: 0;
-      border-radius: 50%;
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
   }
 
 }
+

@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Satya Prakash Nandy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://kit.fontawesome.com/16f3b4346d.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
@@ -13,30 +17,39 @@
 </head>
 
 <body>
-    <div class="loading-screen" id="loadingScreen">
-
-    </div>
     <div class="content">
+        <!-- ================= Div Contain Intro Content ================= -->
         <div class="div-title content-div" id="introContent">
+            <!-- ================= Name And Current Role ================= -->
             <div>
-                <h1>Satya Prakash Nandy</h1>
-                <strong>Software Engineer</strong>
+                <h1 id="myName"></h1>
+                <strong class="current-role">Software Engineer</strong>
             </div>
+            <!-- ================= Intro Footer ================= -->
             <div class="intro-footer">
-                <a href="#" onclick="contentToggleHandler('skillSetContent')"><strong><i
-                            class="fa-solid fa-screwdriver-wrench"></i> Skills</strong></a>
-                <a href="#" onclick="contentToggleHandler('workExperienceContent')"><strong><i class="fa-solid fa-briefcase"></i> Work
-                        Experience</strong></a>
-                <a href="#" onclick="contentToggleHandler('educationContent')"><strong><i class="fa-solid fa-graduation-cap"></i> Education</strong></a>
-                <a href="#" onclick="contentToggleHandler('awardsAndCertificateContent')"><strong><i class="fa-solid fa-award"></i> Awards And
-                        Certificate</strong></a>
-                <a href="#" onclick="contentToggleHandler('projectsContent')"><strong><i class="fa-solid fa-desktop"></i> Projects</strong></a>
-                <a href="#" onclick="contentToggleHandler('contactContent')"><strong><i class="fa-solid fa-envelope"></i> Contact</strong></a>
+                <strong onclick="contentToggleHandler('skillSetContent')"><i class="fa-solid fa-screwdriver-wrench"></i>
+                    <span>Skills</span></strong>
+                <strong onclick="contentToggleHandler('workExperienceContent')"><i class="fa-solid fa-briefcase"></i>
+                    <span>Work
+                        Experience</span></strong>
+                <strong onclick="contentToggleHandler('educationContent')"><i class="fa-solid fa-graduation-cap"></i>
+                    <span>Education</span>
+                </strong>
+                <strong onclick="contentToggleHandler('awardsAndCertificateContent')"><i class="fa-solid fa-award"></i>
+                    <span>Awards And
+                        Certificate</span>
+                </strong>
+                <strong onclick="contentToggleHandler('projectsContent')"><i class="fa-solid fa-desktop"></i>
+                    <span>Projects</span></strong>
+                <strong onclick="contentToggleHandler('contactContent')"><i class="fa-solid fa-envelope"></i>
+                    <span>Contact</span></strong>
             </div>
         </div>
-        <div class="div-title content-div" id="skillSetContent">
-            <div>
-                <h1 style="color:aliceblue;display: block;">Skills</h1>
+        <!-- ================= Div Skills Content ================= -->
+        <div class="div-skills-container content-div" id="skillSetContent">
+            <i class="fa-solid fa-house" id="home" onclick="contentToggleHandler('introContent')"></i>
+            <div class="skills-title">
+                <h1>Skills</h1>
             </div>
             <div class="div-skills">
                 <div>
@@ -54,8 +67,6 @@
                         <li><i class="fa-solid fa-leaf"></i> Spring Boot</li>
                     </ul>
                 </div>
-            </div>
-            <div class="div-skills">
                 <div>
                     <strong>Databases</strong>
                     <ul>
@@ -64,6 +75,8 @@
                         <li><i class="fa-solid fa-database"></i> MongoDB</li>
                     </ul>
                 </div>
+            </div>
+            <div class="div-skills">
                 <div>
                     <strong>Project Methodologies</strong>
                     <ul>
@@ -71,8 +84,6 @@
                         <li><i class="fa-solid fa-diagram-project"></i></i> SCRUM</li>
                     </ul>
                 </div>
-            </div>
-            <div class="div-skills">
                 <div>
                     <strong>Version Control</strong>
                     <ul>
@@ -107,11 +118,22 @@
                 </div>
             </div>
         </div>
-        <div class="div-title content-div" id="educationContent">
-            <div>
-                <h1 style="color:aliceblue;display: block;">Education</h1>
-                <div class="education-footer">
-                    <strong>B.TECH In Computer Science From Centurion University Of Technology And Management</strong>
+        <!-- ================= Div Education Content ================= -->
+        <div class="div-education-container content-div" id="educationContent">
+            <i class="fa-solid fa-house" id="home" onclick="contentToggleHandler('introContent')"></i>
+            <div class="education-title">
+                <h1>Education</h1>
+            </div>
+            <div class="education-list">
+                <div>
+                    <strong>Bachelor Of Technology In Computer Science From Centurion University of Technology and
+                        Management (2015-2019)</strong>
+                </div>
+                <div>
+                    <strong>ISC - Andhra Association English School (2015)</strong>
+                </div>
+                <div>
+                    <strong>ICSE - Andhra Association English School (2013)</strong>
                 </div>
             </div>
         </div>
@@ -133,16 +155,19 @@
                 </div>
             </div>
         </div>
-        <div class="div-title content-div" id="contactContent">
-            <div>
-                <h1 style="color:aliceblue;display: block;">Contact</h1>
-                <div class="contact-footer">
-                    <strong><i class="fa-solid fa-envelope"></i> satyaprakashnandy@gmail.com</strong>
-                    <strong><i class="fa-solid fa-mobile"></i> +91 - 7979884785</strong>
-                    <strong><i class="fa-brands fa-linkedin"></i> <a
-                            href="https://www.linkedin.com/in/satya-prakash-nandy-606531133">Satya Prakash
-                            Nandy</a></strong>
-                </div>
+
+        <div class="div-contact-container  content-div" id="contactContent">
+            <i class="fa-solid fa-house" id="home" onclick="contentToggleHandler('introContent')"></i>
+            <div class="contact-title">
+                <h1>Contact</h1>
+            </div>
+            <div class="contact-content">
+                <strong><i class="fa-solid fa-envelope"></i> satyaprakashnandy@gmail.com</strong>
+                <strong><i class="fa-solid fa-mobile"></i> +91 - 7979884785</strong>
+                <strong><i class="fa-brands fa-linkedin"></i> <a
+                        href="https://www.linkedin.com/in/satya-prakash-nandy-606531133">Satya Prakash
+                        Nandy</a></strong>
+
             </div>
         </div>
     </div>
@@ -200,43 +225,6 @@
         </ul>
     </div>
 </body>
-<script>
-    window.onload = function () {
-        document.getElementById("loadingScreen").style.display = "none";
-    }
-    var isPopUpOpen = false;
-    popupToggler = function (popupName) {
-        var popup = document.getElementsByClassName(popupName);
-        var content = document.getElementsByClassName("content");
-        if (!isPopUpOpen) {
-            popup[0].style.display = "block";
-            content[0].style.display = "none"
-            isPopUpOpen = true;
-        }
-        else {
-            popup[0].style.display = "none";
-            content[0].style.display = "block"
-            isPopUpOpen = false;
-        }
-    }
-
-    contentToggleHandler = function (content) {
-        hideAllContent();
-        showSingleContent(content);
-    }
-
-    hideAllContent = function () {
-        var contentDivs = document.getElementsByClassName('content-div');
-        for (let i = 0; i < contentDivs.length; i++) {
-            contentDivs[i].style.display = 'none'
-        }
-    }
-
-    showSingleContent = function (id) {
-        var contentDiv = document.getElementById(id);
-        $("#" + id).fadeIn("slow");
-    }
-
-</script>
+<script src="index.js"></script>
 
 </html>
